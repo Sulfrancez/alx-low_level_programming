@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ * Title: 4-print_alphabt.c
+ * main - Prints all the letters in lowercase except for q and e
+ *
+ * Return: 0
+ */
+
+int main(void)
+{
+char letter;
+
+for (letter = 'a'; letter <= 'z'; letter++)
+
+{
+if (letter != 'e' && letter != 'q')
+putchar(letter);
+}
+putchar('\n');
+
+return (0);
+}

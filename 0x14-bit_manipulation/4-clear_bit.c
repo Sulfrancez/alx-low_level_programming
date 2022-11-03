@@ -7,14 +7,14 @@
  */
 unsigned long int powX(int b, int p)
 {
-  unsigned long int ans = 1;
+unsigned long int ans = 1;
 
-  while (p)
-    {
-      ans *= b;
-      p--;
-    }
-  return (ans);
+while (p)
+{
+ans *= b;
+p--;
+}
+return (ans);
 }
 
 /**
@@ -25,13 +25,12 @@ unsigned long int powX(int b, int p)
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-  unsigned long int test;
+unsigned long int test;
 
-  if (index > sizeof(n) * BIT_SIZE - 1)
-    return (-1);
+if (index > sizeof(n) * BIT_SIZE - 1)
+return (-1);
 
-  test = powX(2, index);
-  *n = (*n & test) ? *n ^ test : *n;
-  return (1);
-
+test = powX(2, index);
+*n = (*n & test) ? *n ^ test : *n;
+return (1);
 }
